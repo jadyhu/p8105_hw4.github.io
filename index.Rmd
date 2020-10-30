@@ -4,14 +4,18 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
+Hi, I am Tianheng Hu. I am currently a MPH candidate in Biostatistics at Columbia University Mailman School of Public Health. 
 
+ 
 
 # Link to a page within the site
 [About me](about.html)
 
-# Link to my github and LinkedIn
+# Link to other websites
+
+Here are my Github and LinkedIn:
+
 * [Github](https://github.com/jadyhu)
 * [LinkedIn](https://www.linkedin.com/in/jady-tianheng-hu-597a8a105/)
