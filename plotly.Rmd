@@ -1,0 +1,24 @@
+---
+title: "Plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+# Examples of plotly
+
+We are going to look at ny_noaa dataset which contains the weather data from Global Historical Climatology Network
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r}
+data("ny_noaa")
+```
+
