@@ -1,0 +1,67 @@
+---
+title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+
+
+
+# EDUCATION
+
+Columbia University, Mailman School of Public Health, New York, NY 
+Expected May 2021 
+
+* Master of Public Health in Biostatistics
+* CertificateinComparativeEffectivenessOutcomeResearch
+* Related Courses: Applied Regression, Statistical Computing with SAS, Analysis of Categorical Data, RelationalDatabase and SQL Programming, Decision Analysis 
+
+Boston University, College of Arts and Science, Boston, MA 
+May 2019
+*Bachelor of Arts of Mathematics, Bachelor of Arts of Economics
+
+
+# DATA ANALYTICS EXPERIENCE
+
+Aetna, a CVS Health company-New York,NY, Data Science intern, July 2020- Present
+
+* Extended a colonoscopy-specific predictive model to include all outpatient surgeries to assess the impact of medical benefits on member’s likelihood of going to an outpatient hospital and an ambulatory surgical facility and quadrupled the data that this model can handle to 2M medical visits
+* Identified where model performance deteriorates and create Excel and R visualizations to help team pinpoint how model should refine, resulted in a 5% improvement in model accuracy
+* Classified 3K outpatient procedures based on level of acuity, developed 4 new features to tag medical claims where alternative exists and used Github branching workflows to modify large codebases
+* Implemented minor to moderate changes to insurance plan design and improved probability of utilization by 2%
+
+Statistics Research Project-Boston, MA, January-December 2018
+
+* Cleaned 2K simulation data from S&P 500 from 2015 to 2018 using R.
+* Built Garch model with Prof. Gangopadyay and established new method to find changing points. Applied it to real data to predict returns more accurately.
+
+Linear Regression Research Project-Boston,MA 
+January-May 2018
+
+* Utilized statistical and machine learning techniques such as regression, variable selection, cross validation and prediction to predict of forest fires from 9 different environmental conditions.
+* Wrote R code to analyze and give useful recommendations to the government on how to predict and control forest fires.
+
+
+# PROJECT MANAGEMENT EXPERIENCE
+
+Guojin Securities- Shanghai, China, Industry Research Intern, July-September 2018 
+
+* Conducted industry research on 5 electric vehicle companies, investigated product potentials, financial reports and valuation reports over 6 years, and authored research reports for clients to determine suitability for stock purchase
+* Collaborated with a team of 3 members to evaluate Chinese policies on electric cars and predicted the potential influences on the market in a full 20-page report
+* Composed daily report and gathered company notices, industry news and stock prices for clients to keep track of the market
+
+The Coca-Cola Company- Shanghai, China, Trade Marketing Assistant, July-September 2017 
+
+* Spearheaded the design of a new Forecasting Model in Excel that would be used to predict national volumes of 10 products and available to launch of future products
+* Analyzed and cleaned a large pool of raw data supplied by bottling affiliates, then advised them on how to accomplish with predetermined goals, and increased repeated orders by 50%
+* Initiated a reward project that calculated specific bottler rankings and authored an article about the project that was published on the company’s social media account and had more than 5K readers
+* Communicated diligently with an advertising partner which led to a significant promotional boost and grew the national volume by 31% for one of Coca-Cola’s new product launches
+
+
+# SKILLS & QUALIFICATIONS
+
+* Language: Native in Chinese, Fluent in English
+* Technical Skills: Advanced in; R, Stata, SAS, & SQL. Proficient in; Python, Java, Matlab. Experienced in Hadoop & Hive, Tableau
