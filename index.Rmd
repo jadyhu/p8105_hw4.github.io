@@ -1,0 +1,17 @@
+---
+title: "Tianheng Hu's Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+
+
+# Link to a page within the site
+[About me](about.html)
+
+# Link to my github and LinkedIn
+* [Github](https://github.com/jadyhu)
+* [LinkedIn](https://www.linkedin.com/in/jady-tianheng-hu-597a8a105/)
