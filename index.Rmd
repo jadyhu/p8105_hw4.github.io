@@ -12,11 +12,9 @@ Hi, I am Tianheng Hu. I am currently a MPH candidate in Biostatistics at Columbi
 
 
 
-
- 
-
 # Link to a page within the site
-[About me](about.html)
+* [About me](about.html)
+* [Dashboard](dashboard.html)
 
 # Link to other websites
 
@@ -24,3 +22,6 @@ Here are my Github and LinkedIn:
 
 * [Github](https://github.com/jadyhu)
 * [LinkedIn](https://www.linkedin.com/in/jady-tianheng-hu-597a8a105/)
+
+
+![](image/image.jpeg)

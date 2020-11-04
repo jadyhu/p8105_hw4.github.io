@@ -15,23 +15,6 @@ library(plotly)
 ```
 
 
-```{r}
-set.seed(1234)
-instacart = sample_n(instacart, 5000) 
-
-instacart = 
-  instacart %>% 
-  select(order_id, 
-         product_id, 
-         user_id,
-         order_hour_of_day, 
-         days_since_prior_order,
-         product_name, 
-         aisle, 
-         department)
-
-
-```
 
 Column {data-width=550}
 -----------------------------------------------------------------------
