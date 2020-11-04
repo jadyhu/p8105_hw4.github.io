@@ -17,6 +17,26 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+Since the dataset is too large, we will take a random sample of it to do analysis.
+
+```{r}
+set.seed(1234)
+instacart = sample_n(instacart, 5000) 
+
+instacart = 
+  instacart %>% 
+  select(order_id, 
+         product_id, 
+         user_id,
+         order_hour_of_day, 
+         days_since_prior_order,
+         product_name, 
+         aisle, 
+         department)
+
+
+```
+
 
 ```{r}
 data("instacart")
@@ -57,7 +77,7 @@ instacart %>%
   layout(yaxis = y)
 ```
 
-## violin plot
+# violin plot
 
 Is the size of the order related to days since prior order? 
 ```{r}
