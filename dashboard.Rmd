@@ -1,0 +1,100 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r}
+set.seed(1234)
+instacart = sample_n(instacart, 5000) 
+
+instacart = 
+  instacart %>% 
+  select(order_id, 
+         product_id, 
+         user_id,
+         order_hour_of_day, 
+         days_since_prior_order,
+         product_name, 
+         aisle, 
+         department)
+
+
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Order and days since prior order
+
+
+```{r}
+x <- list(
+  title = "Days since prior order"
+)
+
+y <- list(
+  title = "Items in an order"
+)
+
+
+instacart %>% 
+  group_by(order_id) %>% 
+  mutate(
+    num_per_order = n(),
+    text_label=str_c("Days:", days_since_prior_order, "\nItems in an order:", num_per_order)) %>% 
+  distinct(order_id, num_per_order, days_since_prior_order, text_label) %>% 
+  plot_ly(
+    x = ~days_since_prior_order, y = ~num_per_order, text = ~text_label,
+    type = "violin", colors = "viridis") %>% 
+   layout(xaxis = x, yaxis = y)
+
+
+```
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Most popular department
+
+```{r}
+
+y <- list(
+  title = "number of order"
+)
+
+instacart %>% 
+  count(department) %>% 
+  mutate(
+    department = fct_reorder(department,n)) %>% 
+  plot_ly(
+    x = ~department, y = ~n, color = ~department, 
+    type = "bar", colors = "viridis") %>% 
+  layout(yaxis = y)
+
+```
+
+### Time in a day for each department order
+
+```{r}
+y <- list(
+  title = "Hour of a day"
+)
+
+instacart %>% 
+  plot_ly(x = ~department, y = ~order_hour_of_day, type = "box") %>% 
+  layout(yaxis = y)
+
+```
+

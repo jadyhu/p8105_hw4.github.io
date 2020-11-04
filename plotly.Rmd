@@ -9,7 +9,7 @@ output:
 
 # Examples of plotly
 
-We are going to look at ny_noaa dataset which contains the weather data from Global Historical Climatology Network
+We are going to look at instacart dataset.
 
 ```{r}
 library(tidyverse)
@@ -19,6 +19,90 @@ library(plotly)
 
 
 ```{r}
-data("ny_noaa")
+data("instacart")
+```
+
+We will be looking at a subset of the data on information on orders on eggs and have less than 2 weeks since prior order. 
+```{r}
+set.seed(1234)
+instacart = sample_n(instacart, 5000) 
+
+instacart = 
+  instacart %>% 
+  select(order_id, 
+         product_id, 
+         user_id,
+         order_hour_of_day, 
+         days_since_prior_order,
+         product_name, 
+         aisle, 
+         department)
+
+
+
+
+  
+```
+
+# Plotly plots
+
+## boxplot
+
+Among all department, when do customers usually place an order within a day?
+```{r}
+y <- list(
+  title = "Hour of a day"
+)
+
+instacart %>% 
+  plot_ly(x = ~department, y = ~order_hour_of_day, type = "box") %>% 
+  layout(yaxis = y)
+
+```
+
+
+Among all departments, which department is the most popular for users?
+
+```{r}
+y <- list(
+  title = "number of order"
+)
+
+instacart %>% 
+  count(department) %>% 
+  mutate(
+    department = fct_reorder(department,n)) %>% 
+  plot_ly(
+    x = ~department, y = ~n, color = ~department, 
+    type = "bar", colors = "viridis") %>% 
+  layout(yaxis = y)
+```
+
+# Order and days since prior order
+
+Is the size of the order related to days since prior order? 
+```{r}
+
+x <- list(
+  title = "Days since prior order"
+)
+
+y <- list(
+  title = "Items in an order"
+)
+
+
+instacart %>% 
+  group_by(order_id) %>% 
+  mutate(
+    num_per_order = n(),
+    text_label=str_c("Days:", days_since_prior_order, "\nItems in an order:", num_per_order)) %>% 
+  distinct(order_id, num_per_order, days_since_prior_order, text_label) %>% 
+  plot_ly(
+    x = ~days_since_prior_order, y = ~num_per_order, text = ~text_label,
+    type = "violin", colors = "viridis") %>% 
+   layout(xaxis = x, yaxis = y)
+
+
 ```
 
